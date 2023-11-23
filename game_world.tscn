@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://drotvll4c6kci"]
+
+[ext_resource type="PackedScene" uid="uid://c26ld6mtfwlk6" path="res://player_forklift.tscn" id="1_ukj01"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mb2nf"]
+
+[node name="game_world" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+mesh = SubResource("PlaneMesh_mb2nf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.838671, 0.544639, 0, -0.544639, 0.838671, 0, 5, 0)
+
+[node name="player_forklift" parent="." instance=ExtResource("1_ukj01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)

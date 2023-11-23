@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c26ld6mtfwlk6"]
+
+[ext_resource type="Script" path="res://Scripts/player_forklift.gd" id="1_q247y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28kjc"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3gad3"]
+
+[node name="player_forklift" type="Node3D"]
+script = ExtResource("1_q247y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_28kjc")
+mesh = SubResource("SphereMesh_3gad3")

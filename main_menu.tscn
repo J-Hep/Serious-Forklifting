@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx45rw6efavsw"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_qpva6"]
+[ext_resource type="Texture2D" uid="uid://k61mnx7khopm" path="res://Assets/Ui/Incident_1.JPG" id="2_vh471"]
+[ext_resource type="Texture2D" uid="uid://bxjgdi1psu72c" path="res://Assets/Ui/Incident_2.JPG" id="3_ggntk"]
+[ext_resource type="Texture2D" uid="uid://c3f54swtn70yk" path="res://Assets/Ui/Incident_4.JPG" id="3_jjr3v"]
+[ext_resource type="Texture2D" uid="uid://ck7pxrkayo5s7" path="res://Assets/Ui/Incident_3.JPG" id="4_veg7f"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qpva6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Incident1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(957.386, 687.75)
+scale = Vector2(1.4543, 1.4543)
+texture = ExtResource("2_vh471")
+
+[node name="Incident2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(999.529, 541.75)
+scale = Vector2(1.18879, 1.18879)
+texture = ExtResource("3_ggntk")
+
+[node name="Incident3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961.619, 557)
+scale = Vector2(1.27211, 1.27211)
+texture = ExtResource("4_veg7f")
+
+[node name="Incident4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(983.352, 547.5)
+scale = Vector2(1.22433, 1.22433)
+texture = ExtResource("3_jjr3v")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -68.0
+offset_bottom = -36.9989
+grow_horizontal = 2
+grow_vertical = 0
+text = "Begin"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Settings
+"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
