@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://djkorub3snajj"
+path.s3tc="res://.godot/imported/forklift-body-d16cfb6d1fe564a82d6a772334d81cc6_forkliftpaint_ForkliftMaterial_BaseColor.png-81b0062d84e418f68e20128113625ddb.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://Assets/Models/Forklift model/forklift-body-d16cfb6d1fe564a82d6a772334d81cc6_forkliftpaint_ForkliftMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/forklift-body-d16cfb6d1fe564a82d6a772334d81cc6_forkliftpaint_ForkliftMaterial_BaseColor.png-81b0062d84e418f68e20128113625ddb.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

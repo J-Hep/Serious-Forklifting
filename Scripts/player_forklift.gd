@@ -4,7 +4,7 @@ var newMaterial = StandardMaterial3D.new() #Make a new Material
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): 
 	
 	$"MeshInstance3D".material_override = newMaterial 
 	

@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://befvwajik3hcv"]
+
+[ext_resource type="Script" path="res://Forklift.gd" id="1_pcw13"]
+[ext_resource type="PackedScene" uid="uid://2a80gfvaxvvc" path="res://Assets/Models/Forklift model/forklift-body.fbx" id="2_4sekq"]
+[ext_resource type="PackedScene" uid="uid://bd7ay0ntesm15" path="res://Assets/Models/Forklift model/forklift-grill.fbx" id="3_26usj"]
+[ext_resource type="PackedScene" uid="uid://dro8sr8yj82ex" path="res://Assets/Models/Forklift model/forklift-fork.fbx" id="4_sw56n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ah5m1"]
+size = Vector3(1.2767, 2.10754, 2.35935)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7j1nf"]
+size = Vector3(1.18029, 1, 0.14077)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhdci"]
+size = Vector3(0.107184, 0.0598655, 0.94827)
+
+[node name="Forklift" type="Node"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="forklift-body" parent="." instance=ExtResource("2_4sekq")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="forklift-body"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="forklift-body/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09937, -0.417992)
+shape = SubResource("BoxShape3D_ah5m1")
+
+[node name="forklift-grill" parent="." instance=ExtResource("3_26usj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="forklift-grill"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="forklift-grill/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.691295, 1.04498)
+shape = SubResource("BoxShape3D_7j1nf")
+
+[node name="forklift-fork" parent="." instance=ExtResource("4_sw56n")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="forklift-fork"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="forklift-fork/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371252, 0.321065, 1.56018)
+shape = SubResource("BoxShape3D_uhdci")
+
+[node name="forklift-fork2" parent="." instance=ExtResource("4_sw56n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739657, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="forklift-fork2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="forklift-fork2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371252, 0.321065, 1.56018)
+shape = SubResource("BoxShape3D_uhdci")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_pcw13")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09937, -0.417992)
+shape = SubResource("BoxShape3D_ah5m1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999983, 0.00189433, 0.00546384, 0.001898, 0.999998, 0.000667048, -0.00546256, 0.000677407, -0.999985, 0, 1.60994, -0.554839)
